@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>950</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Tabletop Gamers</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>950</width>
+      <height>700</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+
+    <widget class="QWidget" name="login_page">
+     <widget class="QLabel" name="title_lbl">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>60</y>
+        <width>350</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tabletop Gamers - Login</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="email_lbl">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>150</y>
+        <width>80</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Email:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="email_le">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>150</y>
+        <width>250</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="password_lbl">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>190</y>
+        <width>80</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Password:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="password_le">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>190</y>
+        <width>250</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::EchoMode::Password</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="login_btn">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>230</y>
+        <width>120</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Login</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="login_error_lbl">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>270</y>
+        <width>340</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string>color: red;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+
+    <widget class="QWidget" name="main_page">
+     <widget class="QLabel" name="welcome_lbl">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>5</y>
+        <width>400</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="logout_btn">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>5</y>
+        <width>90</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Logout</string>
+      </property>
+     </widget>
+
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>35</y>
+        <width>950</width>
+        <height>665</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+
+      <widget class="QWidget" name="browse_tab">
+       <attribute name="title">
+        <string>Browse &amp; Search</string>
+       </attribute>
+       <widget class="QLineEdit" name="search_le">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>200</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="placeholderText">
+         <string>Search title...</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="category_cb">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>10</y>
+          <width>150</width>
+          <height>25</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="players_sb">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>10</y>
+          <width>110</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="specialValueText">
+         <string>Players</string>
+        </property>
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>30</number>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="age_sb">
+        <property name="geometry">
+         <rect>
+          <x>500</x>
+          <y>10</y>
+          <width>90</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="specialValueText">
+         <string>Age</string>
+        </property>
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>99</number>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="available_only_cb">
+        <property name="geometry">
+         <rect>
+          <x>600</x>
+          <y>10</y>
+          <width>130</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Available only</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="search_btn">
+        <property name="geometry">
+         <rect>
+          <x>740</x>
+          <y>10</y>
+          <width>90</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Search</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="catalogue_tb">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>45</y>
+          <width>910</width>
+          <height>480</height>
+         </rect>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SelectionMode::ExtendedSelection</enum>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>ID</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Game</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Category</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Min Players</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Max Players</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Min Age</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Status</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>On Hold</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QPushButton" name="borrow_btn">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>535</y>
+          <width>140</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Borrow Selected</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="hold_btn">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>535</y>
+          <width>140</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Toggle Hold</string>
+        </property>
+       </widget>
+      </widget>
+
+      <widget class="QWidget" name="loans_tab">
+       <attribute name="title">
+        <string>My Loans</string>
+       </attribute>
+       <widget class="QTableWidget" name="loans_tb">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>910</width>
+          <height>520</height>
+         </rect>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SelectionMode::ExtendedSelection</enum>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+        </property>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>ID</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Game</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QPushButton" name="return_btn">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>540</y>
+          <width>140</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Return Selected</string>
+        </property>
+       </widget>
+      </widget>
+
+      <widget class="QWidget" name="fees_tab">
+       <attribute name="title">
+        <string>My Fees</string>
+       </attribute>
+       <widget class="QTableWidget" name="fees_tb">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>910</width>
+          <height>570</height>
+         </rect>
+        </property>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Year</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Paid</string>
+         </property>
+        </column>
+       </widget>
+      </widget>
+
+      <widget class="QWidget" name="manage_games_tab">
+       <attribute name="title">
+        <string>Manage Games</string>
+       </attribute>
+       <widget class="QLabel" name="name_lbl">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>80</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Name:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="name_le">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>10</y>
+          <width>250</width>
+          <height>25</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="add_cat_lbl">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>45</y>
+          <width>80</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Category:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="add_cat_cb">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>45</y>
+          <width>250</width>
+          <height>25</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="min_players_lbl">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>80</y>
+          <width>90</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Min players:</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="min_players_sb">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>80</y>
+          <width>100</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>30</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="max_players_lbl">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>115</y>
+          <width>90</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Max players:</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="max_players_sb">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>115</y>
+          <width>100</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>30</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="min_age_lbl">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>150</y>
+          <width>90</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Min age:</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="min_age_sb">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>150</y>
+          <width>100</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>99</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="owner_lbl">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>185</y>
+          <width>90</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Owner:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="owner_cb">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>185</y>
+          <width>250</width>
+          <height>25</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="add_game_btn">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>220</y>
+          <width>150</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add Game</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="admin_games_tb">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>10</y>
+          <width>520</width>
+          <height>400</height>
+         </rect>
+        </property>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>ID</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Game</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Category</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Status</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QCheckBox" name="remove_confirm_cb">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>415</y>
+          <width>300</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Confirm removal even if on loan</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="remove_game_btn">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>445</y>
+          <width>150</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Remove Selected</string>
+        </property>
+       </widget>
+      </widget>
+
+      <widget class="QWidget" name="manage_members_tab">
+       <attribute name="title">
+        <string>Manage Members</string>
+       </attribute>
+       <widget class="QLabel" name="reg_first_lbl">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>80</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>First name:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="reg_first_le">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>10</y>
+          <width>200</width>
+          <height>25</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="reg_last_lbl">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>45</y>
+          <width>80</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Last name:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="reg_last_le">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>45</y>
+          <width>200</width>
+          <height>25</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="reg_email_lbl">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>80</y>
+          <width>80</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Email:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="reg_email_le">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>80</y>
+          <width>250</width>
+          <height>25</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="reg_password_lbl">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>115</y>
+          <width>80</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Password:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="reg_password_le">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>115</y>
+          <width>200</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Password</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="reg_phone_lbl">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>150</y>
+          <width>80</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Phone:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="reg_phone_le">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>150</y>
+          <width>200</width>
+          <height>25</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="reg_admin_cb">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>185</y>
+          <width>200</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Admin</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="register_btn">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>220</y>
+          <width>150</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Register Member</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="members_tb">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>10</y>
+          <width>520</width>
+          <height>500</height>
+         </rect>
+        </property>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>ID</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Active</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Admin</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QPushButton" name="toggle_active_btn">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>520</y>
+          <width>180</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Toggle Active Status</string>
+        </property>
+       </widget>
+      </widget>
+
+      <widget class="QWidget" name="manage_fees_tab">
+       <attribute name="title">
+        <string>Manage Fees</string>
+       </attribute>
+       <widget class="QLabel" name="fee_member_lbl">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>90</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Member:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="fee_member_cb">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>10</y>
+          <width>250</width>
+          <height>25</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="member_fees_tb">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>45</y>
+          <width>400</width>
+          <height>400</height>
+         </rect>
+        </property>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Year</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Paid</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QLabel" name="fee_year_lbl">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>455</y>
+          <width>90</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Year to pay:</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="fee_year_sb">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>455</y>
+          <width>100</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>2000</number>
+        </property>
+        <property name="maximum">
+         <number>2100</number>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="mark_paid_btn">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>455</y>
+          <width>150</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Mark Paid</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="run_fees_title_lbl">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>10</y>
+          <width>300</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Run annual fees for all active members</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="run_year_lbl">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>45</y>
+          <width>90</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Year:</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="run_year_sb">
+        <property name="geometry">
+         <rect>
+          <x>540</x>
+          <y>45</y>
+          <width>100</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>2000</number>
+        </property>
+        <property name="maximum">
+         <number>2100</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="run_amt_lbl">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>80</y>
+          <width>90</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Amount:</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="run_amt_sb">
+        <property name="geometry">
+         <rect>
+          <x>540</x>
+          <y>80</y>
+          <width>100</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>1000</number>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="run_fees_btn">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>115</y>
+          <width>190</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Run Annual Fees</string>
+        </property>
+       </widget>
+      </widget>
+
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
